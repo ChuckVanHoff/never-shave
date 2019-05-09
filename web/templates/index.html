@@ -50,19 +50,19 @@ and is wrapped around the whole page content, except for the footer in this exam
             <br><input name="debt" type="number" required>
             <br>
             <br>
-            What was your best SAT math score:
+            What is your college's minimum SAT math score:
             <input name="math" type="number" required>
             <br>
-            <br> What was your best SAT reading score:
+            <br> What is your college's minimum SAT reading score:
             <input name="reading" type="number" required>
             <br>
-            <br> Your 6 year earnings:
+            <br> Your earnings 6 years after graduation:
             <br><input name="six" type="number" required>
             <br>
-            <br> Your 7 year earnings:
+            <br> Your earnings 7 years after graduation:
             <br><input name="seven" type="number" required>
             <br>
-            <br> Your 8 year earnings:
+            <br> Your earnings 8 years after graduation:
             <br><input name="eight" type="number" required>
             <br>
             <br> 
@@ -88,18 +88,18 @@ and is wrapped around the whole page content, except for the footer in this exam
         {% if result1==0 %}
             
                 
-                <p style="font-size:30px">You most likely went to a public school</p>
+                <p style="font-size:30px">Based on you debt at graduations and your earnings after ten years you probably went to a public school.</p>
                <!-- <p style="font-size:50px">{{ result }}</p> -->
         {% endif %}
         {% if result1==1 %}
                 
-                <p style="font-size:30px">You most likely went to a private school</p> 
+                <p style="font-size:30px">Based on you debt at graduation and your earnings after ten years you probably went to a private school.</p> 
         {% endif %}   
     </div>
     <div class="result2" align="center">
       
       {% if result2 %} 
-      <p style="font-size:30px">You might reasonably expect your earnings ten years after graduation to be in this range {{ result2 }}.</p>
+      <p style="font-size:30px">Based on your colege's minimum SAT requirements, you should anticipate your earnings ten years after graduation to be between {{ result2 }}.</p>
       {% endif %}   
       <!-- <p style="font-size:50px">{{ result }}</p> -->
                  
@@ -107,7 +107,7 @@ and is wrapped around the whole page content, except for the footer in this exam
     <div class="result3" align="center">
       
       {% if result3 %} 
-      <p style="font-size:30px">Your predicted 10 years earning is ${{ result3 }}.</p>
+      <p style="font-size:30px">Based on your earnings from 6, 7, and 8 years after graduation, your predicted earnings after 10 years is ${{ result3 }}.</p>
       {% endif %}   
       <!-- <p style="font-size:50px">{{ result }}</p> -->
                  

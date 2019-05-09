@@ -5,7 +5,7 @@ from flask import Flask, render_template, redirect
 from flask import Flask, jsonify, render_template
 from sklearn.externals import joblib
 
-# Use pickle to load in the pre-trained model
+# Use pickle to load in the pre-trained  model
 # with open(f'model/earninings_cost_debt_type.pkl',"rb") as f:
 #     model = pickle.load(f)
 model = joblib.load("earninings_cost_debt_type.pkl")
@@ -39,7 +39,7 @@ def main():
             input_variables = pd.DataFrame([[cost, earnings, debt]],
                 columns=['1', '2', '3'],
                 dtype=float,
-                index=['input'])
+               index=['input'])
         except:
             e = sys.exc_info()[0]
             print(e, file=sys.stderr)                                       
@@ -69,7 +69,7 @@ def main():
                                      result1=prediction,
                                      # original_input2={'math':math,
                                        #                'reading':reading},
-                                     result2=f'${prediction_sat[1:6]} to ${prediction_sat[8:13]}',
+                                     result2=f'${prediction_sat[1:6]} and ${prediction_sat[8:13]}',
                                      result3='{:00.0f}'.format(prediction_ten)
                                      )
         # return jsonify(jdata)
